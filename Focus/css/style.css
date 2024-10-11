@@ -328,9 +328,9 @@ img {
 }
 
 .text-xl {
-  font-size: 2.2rem;
-  line-height: 1.4;
-  font-weight: normal;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 600;
   margin: 40px 0 20px;
 }
 
@@ -428,6 +428,93 @@ img {
   transition: 0.3s;
 }
 
+
+/* Estilo do Carrossel da Equipe */
+.team-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin: 50px 0;
+}
+
+.carousel-container {
+  overflow: hidden;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.member {
+  flex: 0 0 33.33%; /* Três membros visíveis por vez em telas maiores */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.member img {
+  max-width: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.member p {
+  font-size: 1.2rem;
+  font-weight: 450;
+}
+
+.prev, .next {
+  background-color: #ffffff;
+  color: #a3a3a3;
+  border: none;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover, .next:hover {
+  color: var(--dark-color);
+}
+
+/* Responsividade - Mostrar um membro por vez em dispositivos menores */
+@media screen and (max-width: 768px) {
+  .member {
+    flex: 0 0 100%; /* Mostrar um membro por vez no celular */
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .member {
+    flex: 0 0 50%; /* Mostrar dois membros por vez em tablets */
+  }
+}
+
+.about-us{
+  padding: 50px;
+}
+
+
 /* Media Queries */
 @media (max-width: 960px) {
   .text-xxl {
@@ -516,3 +603,4 @@ img {
   }
   
 }
+
